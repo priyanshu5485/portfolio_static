@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title> Qualifications</title>
+<title> Kumar Priyanshu (Resume)</title>
 <link href="css2/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
@@ -28,14 +28,14 @@
 		 </div>
 		<div class="details">
 			 <h3>PHONE</h3>
-			 <p>+91 98 5250 3851</p>  	 
+			 <p>+91 70 0412 3035</p>  	 
 			 <h3>EMAIL</h3>
-			 <p><a href="mailto:pp.5485pan@gmail.com">kr.priyanshu0309@gmail.com</a></p>
+			 <p><a href="mailto:kr.priyanshu0309@gmail.com">kr.priyanshu0309@gmail.com</a></p>
 			 <address>
 			 <h3>ADDRESS</h3>
-			 <span>B-130,</span>
-			 <span>Harmu Housing Colony,</span>
-			 <span>Ranchi, Jharkhand.</span>
+			 <span>Old Muniyappa Building,</span>
+			 <span>Siddappa Layout, Imadihalli, Whitefield </span>
+			 <span>Bangalore, Karnataka.</span>
 			 </address>
 			 
 		</div>
@@ -46,121 +46,127 @@
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 	<!---//pop-up-box---->			
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-	 <div class="content">
-		 <div class="details_header">
-			 <ul>
-				 <li><a href="index.html"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>Home</a></li>
-				 <li><a href="download/Kumar Priyanshu (Resume).pdf" download><span class="glyphicon glyphicon-print" aria-hidden="true"></span>Print CV</a></li>
-				 <li><a href="contact.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Let's Connect</a></li>
-				 <script>
-						$(document).ready(function() {
-						$('.popup-with-zoom-anim').magnificPopup({
-							type: 'inline',
-							fixedContentPos: false,
-							fixedBgPos: true,
-							overflowY: 'auto',
-							closeBtnInside: true,
-							preloader: false,
-							midClick: true,
-							removalDelay: 300,
-							mainClass: 'my-mfp-zoom-in'
-						});
-																						
-						});
-				</script>
-			 </ul>
-		 </div>
+	<div class="content">
+		<!-- Details Header -->
+		<div class="details_header">
+			<ul>
+				<li><a href="index.html"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>Home</a></li>
+				<li><a href="download/Kumar_Priyanshu_Data_Engineer.pdf" download><span
+							class="glyphicon glyphicon-print" aria-hidden="true"></span>Print CV</a></li>
+				<li><a href="contact.html"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>Let's
+						Connect</a></li>
+			</ul>
+		</div>
 
+		<!-- Summary Section -->
 		<div class="skills">
-			<h3 class="clr2">Professional skills</h3>
+			<h3 class="clr2">SUMMARY</h3>
 			<div class="skill_info">
-				<p>I enjoy innovation and love to experiment with different ideas. I am known for inspiring and devising
-					original,
-					thought-provoking concepts. I have cultivated skills through diverse experiences.</p>
+				<p>Analytical and detail-oriented Data Engineer with <span id="experience"></span>+ years of experience
+					in designing, building, and optimizing scalable data pipelines using technologies like Apache Spark,
+					Python, SQL, BigQuery, Dataproc, and Hive. Proven track record in reducing data processing time by
+					over 40% through process optimization and end-to-end ETL pipeline development.</p>
+				<script>
+					// Function to calculate years of experience
+					function calculateExperience(startDate) {
+						const today = new Date();
+						const start = new Date(startDate);
+						let experience = today.getFullYear() - start.getFullYear();
+						const monthDiff = today.getMonth() - start.getMonth();
+						const dayDiff = today.getDate() - start.getDate();
 
-		<div class="skill_list">
-			<div class="skill1">
-				<h4>Programing and Scripting</h4>
-				<ul>
-					<li>Python</li>
-					<li>Java</li>
-					<li>C/C++</li>
-				</ul>
+						if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+							experience--;
+						}
+						return experience;
+					}
+
+					// Replace with your actual start date (format: YYYY-MM-DD)
+					const startDate1 = '2022-02-15';  // Your experience start date here
+					document.getElementById('experience').textContent = calculateExperience(startDate1);
+				</script>
 			</div>
-			<div class="skill2">
-				<h4>Big Data Technologies</h4>
-				<ul>
-					<li>Hadoop</li>
-					<li>Spark</li>
-					<li>Kafka</li>
-				</ul>
-			</div>
-			<div class="skill1">
-				<h4>Databases</h4>
-				<ul>
-					<li>MySQL</li>
-					<li>Hive</li>
-				</ul>
-			</div>
-			
-		
-			<div class="clearfix"></div>
-		</div>
-		</div>
 		</div>
 
+		<!-- Skills Section -->
+		<div class="skills">
+			<h3 class="clr2">SKILLS</h3>
+			<div class="skill_info">
+				<div class="skill-category">
+					<h4>Data Technologies</h4>
+					<p>PySpark, Apache Hive, HDFS, Databricks, ETL, Data Warehouse, OLAP, BigQuery, Dataproc</p>
+				</div>
+
+				<div class="skill-category">
+					<h4>Cloud Platforms</h4>
+					<p>GCP, Databricks</p>
+				</div>
+
+				<div class="skill-category">
+					<h4>Programming</h4>
+					<p>Python, Shell Scripting, SQL (MySQL, Oracle)</p>
+				</div>
+
+				<div class="skill-category">
+					<h4>Tools/Frameworks</h4>
+					<p>Unix, Windows, Autosys, Jira, BitBucket, Confluence, VS Code, Intellij, Agile, Scrum, Jenkins,
+						Git</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Professional Experience Section -->
 		<div class="company">
 			<h3 class="clr1">PROFESSIONAL EXPERIENCE</h3>
 			<div class="company_details">
 				<h4>LTIMindtree <span>Aug 2022 - Present</span></h4>
 				<h6>Data Engineer</h6>
-				<p class="cmpny1">Built and maintained scalable data pipelines to support large-scale data management
-				in alignment with data strategy and data processing standards.
-				<br>Worked with analytics partners to deploy scalable, agile data pipelines
-				for analytic models and algorithms.
-				<br>Explored and established new technologies, tools, and methods to solve complex data
-				problems, fostering innovation within the team.
-				<br>Built standards and reusable components/frameworks for data pipelines, enhancing the efficiency
-				and reliability of data processes.</p>
+				<p class="cmpny1">
+				<ul><li>Developed and optimized data pipelines to process multi-terabyte datasets at a multinational investment bank, leveraging PySpark, Python and Hive to generate actionable insights, resulting in over 40% faster data processing.</li>
+				<li>Utilised Spark SQL and PySpark functions to perform complex data transformations, joins, and data cleaning on 1000+datasets, ensuring high-quality data for analysis and reporting.</li>
+				<li>Loaded terabytes of high-quality, partitioned data into Hive tables in Parquet format, utilizing source file formats such asAvro, ORC, and CSV, reducing storage space up to 75% and enabling advanced analytics.</li>
+				<li>Enhanced ETL workflows by implementing automated shell scripts, reducing manual work and testing efforts by 60%.</li>
+				<li>Utilized Autosys for job scheduling and led the migration of jobs to Control Center, finishing 2 weeks ahead of schedule.</li>
+				<li>Collaborated with stakeholders and Agile teams to refine requirements and implement scalable solutions, contributing proactively in Scrum events.</li></ul>
+				</p>
 			</div>
 			<div class="company_details">
-				<h4>Mindtree <span>Feb 2022 - May 2022</span></h4>
-				<h6>MERN Intern</h6>
-				<p>Gained hands-on experience with the MERN (MongoDB, Express.js, React.js, Node.js) stack.
-				<br>Collaborated with senior developers to build and maintain web applications.
-				<br>Implemented responsive and dynamic user interfaces using React.js.</p>
+				<h4>Mindtree <span>Feb 2022 - July 2022</span></h4>
+				<h6>Intern</h6>
+				<p class="cmpny1">
+				<ul>
+					<li>Designed and implemented 5+ dynamic user interfaces using React.js, enhancing user engagement by 25%.</li>
+					<li>Contributed to web application development, improving project completion rates by 15%.</li>
+					<li>Acquired hands-on experience with the MERN stack (MongoDB, Express.js, React.js, Node.js), advancing
+					full-stack development capabilities.</li>
+				</ul>
+				</p>
 			</div>
 		</div>
 
-		
-			
-
-			
-
-
-
-         <div class="education">
-			 <h3 class="clr3">Education</h3>
-			 <div class="education_details">
-				 <h4>Sapthagiri College of Engineering, Bangalore <span>August 2018 - July 2022</span></h4>
-				 <h6>B. Tech</h6>
-				 <p class="cmpny1">I am pursued my BE in Information Science from Sapthagiri. 
-					 I am proactive and an active member of a coding club. I keep myself engaged in the activities organised by my college and hackathons are my niche.</p>
-			 </div>
-			 <div class="education_details">
-				 <h4>D.A.V. Kapildev Public School, Ranchi <span>April 2016 - March 2018</span></h4>
-				 <h6>AISSCE (12th)</h6>
-				 <p>I did my 12th from Dav kd with PCM as my main subject.
-				I used to take part in various competitions like science exhibition and Coding competitions </p>
-			 </div>
-		 </div>
-		 
-         
-		 
-         
-         
-	 </div>
+		<!-- Education Section -->
+		<div class="education">
+			<h3 class="clr3">Education</h3>
+			<div class="education_details">
+				<h4>Sapthagiri College of Engineering, Bangalore <span>August 2018 - July 2022</span></h4>
+				<h6>B. Tech</h6>
+				<p class="cmpny1">Pursued BE in Information Science from Sapthagiri College of Engineering.
+					<br>Active member of the coding club, participating in activities organized by the college and
+					engaging in hackathons.
+				</p>
+			</div>
+			<div class="education_details">
+				<h4>D.A.V. Kapildev Public School, Ranchi <span>April 2016 - March 2018</span></h4>
+				<h6>AISSCE (12th)</h6>
+				<p>Completed 12th with PCM as the main subjects.
+					<br>Participated in various competitions like science exhibitions and coding contests.
+				</p>
+			</div>
+		</div>
+	</div>
 </div>
+
+
 <!---->
 </body>
 </html>

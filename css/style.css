@@ -498,6 +498,7 @@ span.more a:hover{
 	text-align: right;
 	margin:3em 0;
 }
+
 .social-icons i {
 	width: 90px;
 	height: 90px;
@@ -591,6 +592,19 @@ span.more a:hover{
 }	
 .social-icons i.skype-icon{
 	background-position:-540px 0;						 
+}
+.social-icons i.linkedin-icon {
+	background-position: -180px 0;
+}
+.social-icons i.linkedin-icon:hover {
+	background-position: -540px 0px;
+	opacity: 0.5;
+	color: #fff;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
 }
 .social-icons i.skype-icon:hover{
 	background-position:-540px 0px;

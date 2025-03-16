@@ -16,6 +16,7 @@
 		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!--webfont-->
 	<link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700,500,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/move-top.js"></script>
@@ -40,8 +41,8 @@
 					<span class="menu"> </span>
 					<ul>
 						<li><a href="#aboutus" class="scroll">About Me</a></li>
-						<li><a href="#work" class="scroll">Work</a></li>
-						<li><a href="quali.html" target="_blank">Qualification & Experience</a></li>
+						<li><a href="#work" class="scroll">Certifications</a></li>
+						<li><a href="quali.html" target="_blank">Resume</a></li>
 						<li><a href="#contact" class="scroll">Let's talk</a></li>
 						<div class="clearfix"></div>
 					</ul>
@@ -66,17 +67,20 @@
 						<article style="position: absolute; width: 100%; opacity: 0;">
 							<div class="banner-wrap">
 								<div class="bannertop_box">
-									<h1>HELLO,<span>I'm Kr.Priyanshu</span></h1>
-									<label>Big Data Engineer</label>
-									<p>Working as Big Data Engineer for LTIMindtree.</p>
-									<p>Dynamic and detail-oriented Data Engineer with 2+ years of experience in designing, building, and maintaining
-									data pipelines to support large-scale data management. Proficient in developing complex integrated business
-									solutions, with strong expertise in Java/Scala/Python, SQL, Hadoop, Spark, Kafka, and cloud-based big data
-									technologies. </p>
+									<h1>HELLO, <span>I'm Kr.Priyanshu</span></h1>
+									<label>Data Engineer</label>
+									<p>Working as Data Engineer for LTIMindtree.</p>
+									<p>Dynamic and detail-oriented Data Engineer with <span id="banner_experience"></span> years
+										of experience in designing, building, and maintaining
+										data pipelines to support large-scale data management. Proficient in developing complex
+										integrated business
+										solutions, with strong expertise in Python, SQL, Hadoop, Hive, Spark, GCP, Bigquery and
+										other cloud-based big data
+										technologies.</p>
 								</div>
 								<div class="banner_right">
-									<img src="images/slider-img2.jpg" class="img-responsive" alt="Priyanshu" >
-								</div>>
+									<img src="images/slider-img2.jpg" class="img-responsive" alt="Priyanshu">
+								</div>
 								<div class="clearfix"></div>
 							</div>
 						</article>
@@ -85,18 +89,84 @@
 				<script src="js/jquery.wmuSlider.js"></script>
 				<script>
 					$('.example1').wmuSlider();
+
+					// Function to calculate years of experience
+					function calculateExperience1(startDate) {
+						const today = new Date();
+						const start = new Date(startDate);
+						let experience = today.getFullYear() - start.getFullYear();
+						const monthDiff = today.getMonth() - start.getMonth();
+						const dayDiff = today.getDate() - start.getDate();
+
+						if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+							experience--;
+						}
+						return experience;
+					}
+
+					// Replace with your actual start date (format: YYYY-MM-DD)
+					const startDate = '2022-01-15';  // Your experience start date here
+
+					// Update the experience in the banner
+					document.getElementById('banner_experience').textContent = calculateExperience1(startDate) + "+";
 				</script>
 			</div>
 		</div>
+
 	</div>
 	<div class="content">
 		<div class="about-section" id="aboutus">
 			<div class="about-section-head text-center">
 			<div class="container">
 				<h3>ABOUT ME</h3>
-				<p> My name is Kumar Priyanshu. I am 24 years old, currently working as Data Engineer for LTIMindtree with Citi Bank a client. With the experience of more than 2 years of  in leading the design, implementation, and maintenance of complex software systems. Expert in DataBricks, PySpark, Python, and SQL with a strong background in relational data modeling and cloud systems. Proficient in workflow orchestration tools and notebook environments. Demonstrates excellent analytical Problem-solving, and communication skills.
+				<p> My name is Kumar Priyanshu. I am <span id="age"></span> years old, currently working as a Data Engineer for
+					LTIMindtree with Citi Bank as a client. With <span id="experience"></span>+ years of experience in leading the
+					design, implementation, and maintenance of complex software systems. Expert in GCP, DataBricks, PySpark, Python, Hive,
+					SQL and BigQuery with a strong background in relational data modeling and cloud systems. Proficient in workflow orchestration
+					tools and notebook environments. Demonstrates excellent analytical, problem-solving, and communication skills.
 				</p>
 			</div>
+			
+			<script>
+				// Function to calculate age
+				function calculateAge(birthday) {
+					const today = new Date();
+					const birthDate = new Date(birthday);
+					let age = today.getFullYear() - birthDate.getFullYear();
+					const monthDiff = today.getMonth() - birthDate.getMonth();
+					const dayDiff = today.getDate() - birthDate.getDate();
+
+					if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+						age--;
+					}
+					return age;
+				}
+
+				// Function to calculate years of experience
+				function calculateExperience(startDate) {
+					const today = new Date();
+					const start = new Date(startDate);
+					let experience = today.getFullYear() - start.getFullYear();
+					const monthDiff = today.getMonth() - start.getMonth();
+					const dayDiff = today.getDate() - start.getDate();
+
+					if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+						experience--;
+					} 
+					return experience;
+				}
+
+				// Replace with your actual birthdate (format: YYYY-MM-DD)
+				const birthdate = '2000-04-03';  // Your birthdate here
+
+				// Replace with your actual start date (format: YYYY-MM-DD)
+				const startDate1 = '2022-02-15';  // Your experience start date here
+
+				// Update the age and experience in the 'ABOUT ME' section
+				document.getElementById('age').textContent = calculateAge(birthdate);
+				document.getElementById('experience').textContent = calculateExperience(startDate1);
+			</script>
+
 			</div>
 
 			<div class="about-section-grids">
@@ -106,7 +176,7 @@
 							<h4>Programing and Scripting</h4>
 						</div>
 						<div class="col-md-9 about-section-top-right-grid">
-							<p>Python | Java | C/C++ </p>
+							<p>Python | C/C++ </p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -119,7 +189,7 @@
 							<h4>Big Data Technologies </h4>
 						</div>
 						<div class="col-md-9 about-section-bottom-right-grid">
-							<p>Hadoop(Sqoop, Hive, Pig, MapReduce) | Spark(Spark Streaming, MLib) | Kafka</p>
+							<p>Hadoop(Sqoop, Hive, MapReduce) | Spark</p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -132,7 +202,7 @@
 							<h4>Databases</h4>
 						</div>
 						<div class="col-md-9 about-section-top-right-grid">
-							<p>RDBMS (MySQL) | NoSQL (Cassandra, Hive)</p>
+							<p>MySQL | Oracle | Hive</p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -157,7 +227,7 @@
 							<h4>Cloud Platform</h4>
 						</div>
 						<div class="col-md-9 about-section-bottom-right-grid">
-							<p>Amazon Web Services (AWS)</p>
+							<p>Google Cloud Platform (GCP)</p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -169,7 +239,7 @@
 							<h4>Frameworks and Tools</h4>
 						</div>
 						<div class="col-md-9 about-section-top-right-grid">
-							<p>Bitbucket | Kubernetes</p>
+							<p>Bitbucket | InteliJ</p>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -183,47 +253,50 @@
 		<div class="work-section" id="work">
 			<div class="container">
 				<div class="work-section-head text-center">
-					<h3>WORK</h3>
+					<h3>CERTIFICATIONS</h3>
 				</div>
 				<div id="portfoliolist">
 					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper">
-							<a class="lightbox" href="#goofy">
-								<img src="images/pic1.jpg" class="img-responsive" alt="" />
-				
+							<a class="lightbox" href="#img1">
+								<img src="images/pic1.png" class="img-responsive"
+									alt="Databricks Certified Associate Developer for Apache Spark 3.0" />
 							</a>
-							<div class="lightbox-target" id="goofy">
-								<img src="images/pic1.jpg" class="img-responsive" alt="" />
+							<div class="lightbox-target" id="img1">
+								<img src="images/pic1.png" class="img-responsive"
+									alt="Databricks Certified Associate Developer for Apache Spark 3.0"
+									onclick="window.open('https://credentials.databricks.com/2768958d-e819-46f8-9b13-9997e84df8b8#acc.F1ytKZ5O', '_blank');" />
 								<a class="lightbox-close" href="#"></a>
 							</div>
 						</div>
-				
 					</div>
-					<div class="portfolio app mix_all" style="display: inline-block; opacity: 1;">
+
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper">
-							<a class="lightbox" href="#goofy">
-								<img src="images/pic2.jpg" class="img-responsive" alt="" />
-				
+							<a class="lightbox" href="#img2">
+								<img src="images/pic2.png" class="img-responsive" alt="Certification 2" />
 							</a>
+							<div class="lightbox-target" id="img2">
+								<img src="images/pic2.png" class="img-responsive" alt="Certification 2"
+									onclick="window.open('https://www.coursera.org/account/accomplishments/verify/GKBH63R89WBL', '_blank');" />
+								<a class="lightbox-close" href="#"></a>
+							</div>
 						</div>
 					</div>
-					<div class="portfolio web mix_all" data-cat="web" style="display: inline-block; opacity: 1;">
+					
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper">
-							<a class="lightbox" href="#goofy">
-								<img src="images/pic3.jpg" class="img-responsive" alt="" />
-				
+							<a class="lightbox" href="#img3">
+								<img src="images/pic3.jpg" class="img-responsive" alt="Certification 3" />
 							</a>
-				
+							<div class="lightbox-target" id="img3">
+								<img src="images/pic3.jpg" class="img-responsive" alt="Certification 3"
+									onclick="window.open('https://www.coursera.org/account/accomplishments/verify/SKSMXJYJXFHD?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course', '_blank');" />
+								<a class="lightbox-close" href="#"></a>
+							</div>
 						</div>
 					</div>
-					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
-						<div class="portfolio-wrapper">
-							<a class="lightbox" href="#goofy">
-								<img src="images/pic4.jpg" class="img-responsive" alt="" />
-								<div class="b-wrapper">
-								</div>
-							</a>
-						</div>
+
 					</div>			
 				</div>
 			</div>
@@ -233,7 +306,7 @@
 						<h3>LET'S TALK</h3>
 					</div>
 					<div class="comments-area">
-						<form action="mailto:pp.5485pan@gmail.com" method="post" enctype="text/plain" ></form>>
+						<form action="mailto:pp.5485pan@gmail.com" method="post" enctype="text/plain" ></form>
 							<p>
 								<label>YOUR NAME</label>
 								<input type="text" value="">
@@ -252,10 +325,13 @@
 						</form>
 					</div>
 					<div class="social-icons">
-						<a href="https://www.linkedin.com/in/pancho10/" target="_blank"><i class="linkein-icon"></i></a>
+						<a href="https://www.linkedin.com/in/priyanshu0309/" target="_blank"><i
+								class="linkedin-icon"></i></a>
 						<a href="https://twitter.com/impancho10" target="_blank"><i class="twitter-icon"></i></a>
-						<a href="https://www.facebook.com/priyanshu.pandey.988" target="_blank"><i class="facebook-icon"></i></a>
+						<a href="https://www.facebook.com/profile.php?id=100089336544424" target="_blank"><i
+								class="facebook-icon"></i></a>
 						<a href="https://join.skype.com/invite/u5ZGc2LCgedz" target="_blank"><i class="skype-icon"></i></a>
+						<a href="https://github.com/priyanshu5485" target="_blank"><i class="github-icon"></i></a>
 					</div>
 				</div>
 			</div>
