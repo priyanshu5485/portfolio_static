@@ -4,7 +4,7 @@
 <head>
 	<title>Kumar Priyanshu (Portfolio) </title>
 
-	
+
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -30,6 +30,7 @@
 		});
 	</script>
 </head>
+
 <body>
 	<div class="header">
 		<div class="header-top">
@@ -55,11 +56,11 @@
 					});
 				</script>
 				<!-- script-for-menu -->
-	
+
 				<div class="clearfix"></div>
 			</div>
 		</div>
-	
+
 		<div class="index-banner">
 			<div class="container">
 				<div class="wmuSlider example1">
@@ -70,11 +71,14 @@
 									<h1>HELLO, <span>I'm Kr.Priyanshu</span></h1>
 									<label>Data Engineer</label>
 									<p>Working as Data Engineer for LTIMindtree.</p>
-									<p>Dynamic and detail-oriented Data Engineer with <span id="banner_experience"></span> years
+									<p>Dynamic and detail-oriented Data Engineer with <span
+											id="banner_experience"></span> years
 										of experience in designing, building, and maintaining
-										data pipelines to support large-scale data management. Proficient in developing complex
+										data pipelines to support large-scale data management. Proficient in developing
+										complex
 										integrated business
-										solutions, with strong expertise in Python, SQL, Hadoop, Hive, Spark, GCP, Bigquery and
+										solutions, with strong expertise in Python, SQL, Hadoop, Hive, Spark, GCP,
+										Bigquery and
 										other cloud-based big data
 										technologies.</p>
 								</div>
@@ -117,55 +121,60 @@
 	<div class="content">
 		<div class="about-section" id="aboutus">
 			<div class="about-section-head text-center">
-			<div class="container">
-				<h3>ABOUT ME</h3>
-				<p> My name is Kumar Priyanshu. I am <span id="age"></span> years old, currently working as a Data Engineer for
-					LTIMindtree with Citi Bank as a client. With <span id="experience"></span>+ years of experience in leading the
-					design, implementation, and maintenance of complex software systems. Expert in GCP, DataBricks, PySpark, Python, Hive,
-					SQL and BigQuery with a strong background in relational data modeling and cloud systems. Proficient in workflow orchestration
-					tools and notebook environments. Demonstrates excellent analytical, problem-solving, and communication skills.
-				</p>
-			</div>
-			
-			<script>
-				// Function to calculate age
-				function calculateAge(birthday) {
-					const today = new Date();
-					const birthDate = new Date(birthday);
-					let age = today.getFullYear() - birthDate.getFullYear();
-					const monthDiff = today.getMonth() - birthDate.getMonth();
-					const dayDiff = today.getDate() - birthDate.getDate();
+				<div class="container">
+					<h3>ABOUT ME</h3>
+					<p> My name is Kumar Priyanshu. I am <span id="age"></span> years old, currently working as a Data
+						Engineer for
+						LTIMindtree with Citi Bank as a client. With <span id="experience"></span>+ years of experience
+						in leading the
+						design, implementation, and maintenance of complex software systems. Expert in GCP, DataBricks,
+						PySpark, Python, Hive,
+						SQL and BigQuery with a strong background in relational data modeling and cloud systems.
+						Proficient in workflow orchestration
+						tools and notebook environments. Demonstrates excellent analytical, problem-solving, and
+						communication skills.
+					</p>
+				</div>
 
-					if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-						age--;
+				<script>
+					// Function to calculate age
+					function calculateAge(birthday) {
+						const today = new Date();
+						const birthDate = new Date(birthday);
+						let age = today.getFullYear() - birthDate.getFullYear();
+						const monthDiff = today.getMonth() - birthDate.getMonth();
+						const dayDiff = today.getDate() - birthDate.getDate();
+
+						if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+							age--;
+						}
+						return age;
 					}
-					return age;
-				}
 
-				// Function to calculate years of experience
-				function calculateExperience(startDate) {
-					const today = new Date();
-					const start = new Date(startDate);
-					let experience = today.getFullYear() - start.getFullYear();
-					const monthDiff = today.getMonth() - start.getMonth();
-					const dayDiff = today.getDate() - start.getDate();
+					// Function to calculate years of experience
+					function calculateExperience(startDate) {
+						const today = new Date();
+						const start = new Date(startDate);
+						let experience = today.getFullYear() - start.getFullYear();
+						const monthDiff = today.getMonth() - start.getMonth();
+						const dayDiff = today.getDate() - start.getDate();
 
-					if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-						experience--;
-					} 
-					return experience;
-				}
+						if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+							experience--;
+						}
+						return experience;
+					}
 
-				// Replace with your actual birthdate (format: YYYY-MM-DD)
-				const birthdate = '2000-04-03';  // Your birthdate here
+					// Replace with your actual birthdate (format: YYYY-MM-DD)
+					const birthdate = '2000-04-03';  // Your birthdate here
 
-				// Replace with your actual start date (format: YYYY-MM-DD)
-				const startDate1 = '2022-02-15';  // Your experience start date here
+					// Replace with your actual start date (format: YYYY-MM-DD)
+					const startDate1 = '2022-02-15';  // Your experience start date here
 
-				// Update the age and experience in the 'ABOUT ME' section
-				document.getElementById('age').textContent = calculateAge(birthdate);
-				document.getElementById('experience').textContent = calculateExperience(startDate1);
-			</script>
+					// Update the age and experience in the 'ABOUT ME' section
+					document.getElementById('age').textContent = calculateAge(birthdate);
+					document.getElementById('experience').textContent = calculateExperience(startDate1);
+				</script>
 
 			</div>
 
@@ -246,7 +255,7 @@
 				</div>
 
 
-				
+
 
 			</div>
 		</div>
@@ -283,7 +292,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
 						<div class="portfolio-wrapper">
 							<a class="lightbox" href="#img3">
@@ -297,56 +306,57 @@
 						</div>
 					</div>
 
-					</div>			
 				</div>
 			</div>
-			<div class="contact-section" id="contact">
-				<div class="container">
-					<div class="contact-section-head text-center">
-						<h3>LET'S TALK</h3>
-					</div>
-					<div class="comments-area">
-						<form action="mailto:pp.5485pan@gmail.com" method="post" enctype="text/plain" ></form>
-							<p>
-								<label>YOUR NAME</label>
-								<input type="text" value="">
-							</p>
-							<p>
-								<label>YOUR EMAIL</label>
-								<input type="text" value="">
-							</p>
-							<p>
-								<label>YOUR MESSAGE</label>
-								<textarea></textarea>
-							</p>
-							<div class="submit">
-								<input type="submit" value="submit">
-							</div>
-						</form>
-					</div>
-					<div class="social-icons">
-						<a href="https://www.linkedin.com/in/priyanshu0309/" target="_blank"><i
-								class="linkedin-icon"></i></a>
-						<a href="https://twitter.com/impancho10" target="_blank"><i class="twitter-icon"></i></a>
-						<a href="https://www.facebook.com/profile.php?id=100089336544424" target="_blank"><i
-								class="facebook-icon"></i></a>
-						<a href="https://join.skype.com/invite/u5ZGc2LCgedz" target="_blank"><i class="skype-icon"></i></a>
-						<a href="https://github.com/priyanshu5485" target="_blank"><i class="github-icon"></i></a>
-					</div>
-				</div>
-			</div>
-			<script type="text/javascript">
-				$(document).ready(function () {
-					$().UItoTop({ easingType: 'easeOutQuart' });
-
-				});
-			</script>
-			<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 		</div>
+		<div class="contact-section" id="contact">
+			<div class="container">
+				<div class="contact-section-head text-center">
+					<h3>LET'S TALK</h3>
+				</div>
+				<div class="comments-area">
+					<form action="mailto:kr.priyanshu0309@gmail.com" method="post" enctype="text/plain"></form>
+					<p>
+						<label>YOUR NAME</label>
+						<input type="text" value="">
+					</p>
+					<p>
+						<label>YOUR EMAIL</label>
+						<input type="text" value="">
+					</p>
+					<p>
+						<label>YOUR MESSAGE</label>
+						<textarea></textarea>
+					</p>
+					<div class="submit">
+						<input type="submit" value="submit">
+					</div>
+					</form>
+				</div>
+				<div class="social-icons">
+					<a href="https://www.linkedin.com/in/priyanshu0309/" target="_blank"><i
+							class="linkedin-icon"></i></a>
+					<a href="https://twitter.com/impancho10" target="_blank"><i class="twitter-icon"></i></a>
+					<a href="https://www.facebook.com/profile.php?id=100089336544424" target="_blank"><i
+							class="facebook-icon"></i></a>
+					<a href="https://join.skype.com/invite/u5ZGc2LCgedz" target="_blank"><i class="skype-icon"></i></a>
+					<a href="https://github.com/priyanshu5485" target="_blank"><i class="behance-icon"></i></a>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+		</script>
+		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
 	</div>
-	
-	
+	</div>
+
+
 
 
 </body>
+
 </html>>

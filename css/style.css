@@ -538,19 +538,7 @@ span.more a:hover{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
-.social-icons i.linkein-icon{
-	background-position:-180px 0px;						 
-}   
-.social-icons i.linkein-icon:hover{
-	background-position:-180px 0px;
-	opacity: 0.5;
-	color:#fff;	
-	transition:0.5s all;
-	-webkit-transition:0.5s all;
-	-moz-transition:0.5s all;
-	-o-transition:0.5s all;
-	-ms-transition:0.5s all;
-}
+
 .social-icons i.vimeo-icon{
 	background-position:-270px 0px;						 
 }
@@ -597,7 +585,7 @@ span.more a:hover{
 	background-position: -180px 0;
 }
 .social-icons i.linkedin-icon:hover {
-	background-position: -540px 0px;
+	background-position: -180px 0px;
 	opacity: 0.5;
 	color: #fff;
 	transition: 0.5s all;
